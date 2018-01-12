@@ -1,0 +1,186 @@
+% Resume
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeEducation}[6]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} \\
+      \textit{\small#6} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProject}[3]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small{#3} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{ 
+    \item\small{
+        \textbf{#1}{: #2 \vspace{-2pt}}
+  }}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{http://sethbrunwasser.me/}{\huge Seth Brunwasser}} & 
+  \href{http://sethbrunwasser.me/}{http://sethbrunwasser.me} \\
+  Email : \href{mailto:sbrunwasser1998@gmail.com}{sbrunwasser1998@gmail.com} &
+  \href{https://github.com/SethBrunwasser}{github.com/sethbrunwasser} \\
+  Mobile : (480)-276-2504 &
+  \href{https://www.linkedin.com/in/SethBrunwasser/}{LinkedIn.com/in/sethbrunwasser} \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeEducation
+      {Arizona State University}{Tempe, AZ}
+      {Bachelor of Science in Computer Science;  GPA: 3.6}{Aug. 2016 -- May 2020}
+      {Dean's List Fall 2016 - Spring 2017}
+      {Roger L. Von Amelunxen Scholar}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Avnet}{Phoenix, AZ}
+      {Machine Learning Intern}{May 2017 - Sept 2017}
+      \resumeItemListStart
+        \resumeItem{Built a predictive model using boosted decision trees to detect business migration with 98\% accuracy}
+        \resumeItem{Proposed said model which reduces the number of staff working on
+            this task from 14 to 1, saving an estimated \$500,000 in labor cost}
+        \resumeItem{Used Levenshtein Distance and other string comparison functions in Python to find similarities in customer and part number data across multiple datasets to be used as features}
+        \resumeItem{Utilized Python Multiprocessing to spread computation load across 4 cores, reducing computation time by 300\%}
+        \resumeItem{Began expanding functionality of predictive model by adding multi-classification to detect business migration by region}
+        \resumeItem{Used Facebook Prophet to develop forecasts with seasonality for inventory and billing data}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Arizona State University}{Tempe, AZ}
+      {Student Research Assistant}{Jan 2017 - May 2017}
+      \resumeItemListStart
+        \resumeItem{Conducted data collection for business analysts to report on}
+        \resumeItem{Cleaned and standardized confidential student and alumni data}
+        \resumeItem{Communicated with students daily and held accountability for students’ privacy}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+  	\resumeProject{PrivaCV}{Personal, 2018}{Python}
+    	\resumeItemListStart
+        	\resumeItem{PrivaCV is an security application that turns off the screen display when an unauthorized user is in view}
+            \resumeItem{Used Haar Cascade to detect and identify faces in webcam using OpenCV}
+        \resumeItemListEnd
+    \resumeProject{Twitter Stock Research}{Personal, 2017}{Python}
+        \resumeItemListStart
+            \resumeItem{Used Twitter API to query publicly traded companies for sentiment analysis on tweets}
+            \resumeItem{Performed Pearson Correlation on sentiment analysis of tweets with change in stock price}
+        \resumeItemListEnd
+    \resumeProject{Amazon Echo Mortal Kombat}{Southwest Hacks, 2017}{Python}
+        \resumeItemListStart
+            \resumeItem{Used Flask-Ask to create a two-person, turn-based, fighter game using Amazon Alexa voice commands in team-oriented environment}
+            \resumeItem{Built and hosted Alexa Skill on AWS}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  
+  
+%------------EXTRACURRICULAR------------
+\section{Extracurricular}
+    \resumeSubHeadingListStart
+        \resumeSubItem{E2 Camp Counselor}
+          {Mentored incoming freshman on strategies for succeeding in engineering in addition to engaging campers in communication, team building, and engineering practices.}
+        \resumeSubItem{Software Developer Association, Member}
+          {Attended SoDA meetings, networked with attendees, and learned about the latest technologies with industry leaders.}
+  \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{Languages}{: Python, Javascript, C++, SQL, Java, HTML/CSS}
+    }
+    \item{
+      \textbf{Technologies}{: Apache Spark, Microsoft Azure, Jupyter Notebook, Git}
+    }
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
